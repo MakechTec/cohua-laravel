@@ -10,7 +10,10 @@ class CreateCartItemInfosTable extends Migration{
 
         Schema::create('cart_item_infos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('cart_item_id')->constrained();
+            $table->foreignId('cart_item_id')
+                  ->constrained()
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
             $table->string('field');
             $table->string('value');
             $table->timestamps();
