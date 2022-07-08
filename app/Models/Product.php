@@ -11,7 +11,7 @@ class Product extends Model{
 
     use HasFactory;
 
-    public function productInfo(){
+    public function productInfos(){
         return $this->hasMany(ProductInfo::class);
     }
 }

@@ -18,4 +18,8 @@ class CartItem extends Model{
     public function product(){
         return $this->belongsTo(Product::class);
     }
+
+    public function cartItemInfos(){
+        return $this->hasMany(CartItemInfo::class);
+    }
 }

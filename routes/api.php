@@ -13,9 +13,9 @@ Route::middleware('auth:sanctum')
 Route::resource('/products', ProductController::class)
         ->only(['index', 'store', 'show', 'update', 'destroy']);
 
-Route::resource('/cart', CartController::class)
+Route::resource('/carts', CartController::class)
         ->only(['index', 'store', 'show', 'destroy']);
 
-Route::post('/cart/{id}/add-item', [CartController::class,'addItem']);
-Route::delete('/cart/{id}/remove-item/{productId}', [CartController::class,'removeItem']);
-Route::get('/cart/{id}/single-item/{productId}', [CartController::class,'singleItem']);
+Route::post('/carts/{id}/add-item', [CartController::class,'addItem'])->name('cart.add-item');
+Route::delete('/carts/{id}/remove-item/{productId}', [CartController::class,'removeItem'])->name('cart.remove-item');
+Route::get('/carts/{id}/single-item/{productId}', [CartController::class,'singleItem'])->name('cart.single-item');
