@@ -46,9 +46,9 @@ class CartController extends Controller{
         return ResponseCollection::success();
     }
 
-    public function removeItem(Request $request, $id){
+    public function removeItem($id, $productId){
         $cart = CartModel::find($id);
-        $cart->cartItems()->where('product_id', $request->product_id)->delete();
+        $cart->cartItems()->where('product_id', $productId)->delete();
         return ResponseCollection::success();
     }
 
