@@ -4,6 +4,14 @@
     "description": "laravel implementation for Cohua",
     "keywords": ["shop", "cohua", "laravel", "ecommerce", "makechtec"],
     "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "makechtec",
+            "email": "angeldomp49@gmail.com",
+            "homepage": "https://github.com/MakechTec/cohua-laravel"
+        }
+    ],
     "repositories":[
         {
         "type": "git",
